@@ -29,7 +29,7 @@ func make_packet() []byte {
 }
 
 func receive_messages(conn *icmp.PacketConn) {
-	fmt.Println("starting the reception...")
+
 	buffer := make([]byte, 1024)
 	bSize, peer_ip_addr, err := conn.ReadFrom(buffer)
 	fmt.Printf("buffer size %v\n", bSize)
